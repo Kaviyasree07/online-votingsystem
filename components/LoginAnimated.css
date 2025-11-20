@@ -1,0 +1,231 @@
+/* 🌈 FULL SCREEN CONTAINER */
+.login-bg {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; /* prevents scroll */
+  background: linear-gradient(135deg, #dfe9ff, #e7d6ff);
+  font-family: "Poppins", sans-serif;
+}
+
+/* ➤ LEFT PANEL */
+.left-panel {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;     /* centers vertically */
+  padding-left: 60px;
+  padding-right: 40px;
+  color: #1a2149;
+}
+
+.quote-main {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.quote-sub {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #3e4772;
+  max-width: 500px;
+}
+
+.quote-highlight {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 30px;
+}
+
+/* Illustration (BIG + CENTER) */
+.quote-illustration {
+  width: 300px;
+  margin-top: 10px;
+  animation: softFloat 4s infinite ease-in-out;
+}
+
+@keyframes softFloat {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+/* Remove unnecessary floating icons */
+.floating-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.float-icon {
+  width: 60px;
+  opacity: 0.8;
+  animation: softFloat 5s infinite ease-in-out;
+}
+
+.delay1 { animation-delay: 1.5s; }
+.delay2 { animation-delay: 2.5s; }
+
+/* ➤ RIGHT PANEL */
+.right-panel {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* vertically centers */
+}
+
+/* ✨ GLASS EFFECT CARD */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  padding: 35px;
+  border-radius: 20px;
+  width: 360px;
+  box-shadow: 0 8px 35px rgba(0,0,0,0.18);
+  animation: fadeIn 1.2s ease;
+}
+
+.login-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.login-sub {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* INPUTS */
+.login-input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 16px;
+  outline: none;
+}
+
+.login-input:focus {
+  border-color: #4c8bf5;
+  box-shadow: 0 0 5px rgba(76, 139, 245, 0.4);
+}
+
+/* BUTTON */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 18px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background: #4c8bf5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background: #366edb;
+  transform: translateY(-2px);
+}
+
+/* CAPTCHA */
+.captcha-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.captcha-box {
+  background: #1e2a44;
+  color: white;
+  padding: 10px 20px;
+  font-size: 22px;
+  border-radius: 10px;
+  letter-spacing: 3px;
+}
+
+.captcha-refresh {
+  margin-left: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: #4c8bf5;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.captcha-refresh:hover {
+  background: #366edb;
+}
+
+/* ANIMATIONS */
+.fadeIn { animation: fadeIn 1.2s ease; }
+.slideUp { animation: slideUp 1.2s ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.vote-image {
+  width: 420px;
+  margin-top: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  animation: fadeIn 1.5s ease-in-out;
+}
+/* Remove horizontal scrolling completely */
+html, body {
+  width: 100%;
+  overflow-x: hidden !important;
+}
+
+/* Ensure login background fits perfectly */
+.login-bg {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden !important;
+}
+/* Force login page to take the full screen width */
+.login-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  overflow: hidden !important;
+  background: linear-gradient(135deg, #dff1ff, #e8dbff);
+  z-index: 0;
+}
+
+/* Remove container restrictions applied by global styles */
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden !important;
+}

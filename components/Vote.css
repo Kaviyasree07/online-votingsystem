@@ -1,0 +1,135 @@
+/* 🌤 Page Background */
+.vote-page-bg {
+  min-height: 100vh;
+  padding: 30px;
+  background: linear-gradient(135deg, #d0e8ff, #f1f5ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✨ Quote Box */
+.quote-box {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 18px 30px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+}
+
+.quote-box h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1e3557;
+}
+
+/* 🔷 Title */
+.vote-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #1e2a44;
+}
+
+/* 📦 Candidate Grid */
+.vote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  width: 80%;
+}
+
+/* 🎴 Candidate Card */
+.candidate-card {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.1);
+  cursor: pointer;
+  border: 2px solid transparent;
+  backdrop-filter: blur(10px);
+}
+
+/* ⭐ Hover Glow Animation */
+.hover-grow:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0px 10px 25px rgba(0, 120, 255, 0.3);
+}
+
+/* 🎯 Selected Card Styling */
+.selected-card {
+  border: 3px solid #438dfc;
+  box-shadow: 0px 0px 25px rgba(67,141,252,0.7);
+  animation: pulseGlow 1.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 10px rgba(67,141,252,0.6); }
+  50% { box-shadow: 0 0 18px rgba(67,141,252,1); }
+  100% { box-shadow: 0 0 10px rgba(67,141,252,0.6); }
+}
+
+/* 🖼 Candidate Photo */
+.candidate-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  transition: 0.3s;
+}
+
+/* Zoom effect on hover */
+.candidate-card:hover .candidate-photo {
+  transform: scale(1.08);
+}
+
+/* Political party name */
+.party-name {
+  color: #333;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* 🟦 Vote Button */
+.vote-btn {
+  background: #4c8bf5;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  color: white;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+  box-shadow: 0px 5px 15px rgba(76, 139, 245, 0.5);
+}
+
+.vote-btn:hover {
+  background: #2f6ae0;
+  transform: scale(1.1);
+}
+
+/* ✔ You Voted badge */
+.voted-badge {
+  margin-top: 12px;
+  padding: 10px;
+  background: #28a745;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* 🔒 Closed badge */
+.closed-badge {
+  margin-top: 12px;
+  padding: 10px;
+  background: #999;
+  color: white;
+  border-radius: 8px;
+}

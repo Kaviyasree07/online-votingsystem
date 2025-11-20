@@ -1,0 +1,163 @@
+body {
+  background: #eef3ff;
+  font-family: "Poppins", sans-serif;
+}
+
+.results-page {
+  padding: 20px;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 15px;
+  color: #1e2a44;
+  font-weight: bold;
+}
+
+/* WINNER CARD */
+.winner-card {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 18px;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto 25px auto;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.winner-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid gold;
+  object-fit: cover;
+}
+
+.winner-info {
+  margin-left: 20px;
+}
+
+.winner-name {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.winner-votes {
+  font-size: 18px;
+}
+
+/* STATS ROW */
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  width: 180px;
+  padding: 18px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  color: #4c8bf5;
+  font-size: 28px;
+  margin: 0;
+}
+
+/* CHARTS */
+.charts-row {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.chart-box {
+  width: 40%;
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* TABLE */
+.results-table {
+  width: 90%;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.results-table th {
+  background: #4c8bf5;
+  color: white;
+  padding: 12px;
+}
+
+.results-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ececec;
+}
+
+.table-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.fadeIn {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* 🔥 Winner Golden Glow Animation */
+.winner-card {
+  position: relative;
+  animation: goldGlow 2.5s infinite ease-in-out;
+}
+
+@keyframes goldGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.85);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  }
+}
+
+/* Optional: glow for the circular image border */
+.winner-img {
+  animation: imgGlow 2.5s infinite ease-in-out;
+}
+
+@keyframes imgGlow {
+  0% {
+    border-color: gold;
+    box-shadow: 0 0 10px gold;
+  }
+  50% {
+    border-color: #ffeb3b;
+    box-shadow: 0 0 25px #ffeb3b;
+  }
+  100% {
+    border-color: gold;
+    box-shadow: 0 0 10px gold;
+  }
+}

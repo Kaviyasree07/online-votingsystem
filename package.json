@@ -1,32 +1,31 @@
 {
-  "name": "backend",
+  "name": "frontend",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kaviyasree07/online-votingsystem.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Kaviyasree07/online-votingsystem/issues"
-  },
-  "homepage": "https://github.com/Kaviyasree07/online-votingsystem#readme",
+  "private": true,
   "dependencies": {
-    "bcryptjs": "^3.0.3",
-    "body-parser": "^2.2.0",
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.19.3",
-    "nodemailer": "^7.0.10",
-    "nodemon": "^3.1.10"
+    "axios": "^1.13.2",
+    "bootstrap": "^5.3.8",
+    "chart.js": "^4.5.1",
+    "react-chartjs-2": "^5.3.1",
+    "react-router-dom": "^7.9.5",
+    "react-scripts": "^5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

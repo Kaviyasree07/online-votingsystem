@@ -1,0 +1,113 @@
+/* 🌤 Soft Modern Background */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e0e7ff, #f0f9ff); /* Light lavender → baby blue */
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+}
+
+/* MAIN CONTAINER */
+.dashboard-container {
+  text-align: center;
+  margin-top: 20px;
+  color: #1e2a44;
+}
+
+.dashboard-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #1d1b31;
+}
+
+/* GRID */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+/* 🌟 Elevated Highlighted Cards */
+.dash-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #e6e9f0;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.1); /* soft highlight */
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.dash-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 28px rgba(0,0,0,0.15);
+}
+
+/* Special status cards */
+.status-card {
+  border-left: 6px solid #4c8bf5;
+}
+
+.vote-status {
+  border-left: 6px solid #f5a742;
+}
+
+/* BUTTONS */
+.button-row {
+  margin-top: 30px;
+}
+
+.action-btn {
+  background: #4c8bf5;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  color: white;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 6px 14px rgba(76, 139, 245, 0.3);
+}
+
+.action-btn:hover {
+  background: #2f6ae0;
+  transform: translateY(-5px);
+}
+
+/* Secondary button */
+.secondary {
+  background: #20c997;
+  box-shadow: 0px 6px 14px rgba(32, 201, 151, 0.3);
+}
+
+.secondary:hover {
+  background: #0f9b74;
+}
+
+/* Smooth fade animation */
+.faded-in {
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+/* Make Dashboard full-screen */
+.dashboard-fullscreen {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* Ensure the grid stretches full width */
+.dashboard-fullscreen .card-grid {
+  max-width: 1400px;
+  margin: auto;
+}
